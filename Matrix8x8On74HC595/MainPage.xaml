@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnStartButtonClick"/>
+            <Button x:Name="StopButton" Grid.Column="1" Content="Stop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnStopButtonClick"/>
+
+        </Grid>
     </Grid>
 </Page>
